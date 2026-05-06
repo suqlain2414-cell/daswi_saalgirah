@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Zunairah ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300;500;700&display=swap');
+
+        :root {
+            --primary-pink: #fce4ec;
+            --accent-pink: #f06292;
+            --dark-pink: #ad1457;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--primary-pink);
+            color: var(--dark-pink);
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cursive {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        /* Floating Hearts Animation */
+        .heart {
+            position: fixed;
+            top: -10vh;
+            font-size: 20px;
+            color: var(--accent-pink);
+            user-select: none;
+            pointer-events: none;
+            z-index: 0;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(240, 98, 146, 0.1);
+        }
+
+        .nav-btn {
+            transition: transform 0.2s;
+        }
+
+        .nav-btn:active {
+            transform: scale(0.95);
+        }
+
+        .hidden-section {
+            display: none;
+        }
+
+        .modal-overlay {
+            background: rgba(0, 0, 0, 0.4);
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 50;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Image Grid Style */
+        .memory-img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 3px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .memory-img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen items-center justify-center p-4">
+
+    <!-- Landing Page (Menu) -->
+    <section id="menu" class="w-full max-w-md text-center z-10">
+        <div class="mb-8">
+            <h1 class="text-4xl cursive mb-2">For Zunairah</h1>
+            <p class="text-sm opacity-80 italic">❤️ Explore the little things I love about us ❤️</p>
+        </div>
+
+        <div class="glass-card p-8 grid grid-cols-2 gap-6">
+            <div onclick="showSection('memories')" class="nav-btn cursor-pointer flex flex-col items-center">
+                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-2 shadow-sm">
+                    <i class="fa-solid fa-image text-2xl text-pink-400"></i>
+                </div>
+                <span class="text-xs font-bold uppercase tracking-wider">Our Memories</span>
+            </div>
+
+            <div onclick="showSection('letter')" class="nav-btn cursor-pointer flex flex-col items-center">
+                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-2 shadow-sm">
+                    <i class="fa-solid fa-envelope text-2xl text-pink-400"></i>
+                </div>
+                <span class="text-xs font-bold uppercase tracking-wider">My Letter</span>
+            </div>
+
+            <div onclick="showSection('why')" class="nav-btn cursor-pointer flex flex-col items-center">
+                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-2 shadow-sm">
+                    <i class="fa-solid fa-heart text-2xl text-pink-400"></i>
+                </div>
+                <span class="text-xs font-bold uppercase tracking-wider">Why I Love You</span>
+            </div>
+
+            <div onclick="showSection('date')" class="nav-btn cursor-pointer flex flex-col items-center">
+                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-2 shadow-sm">
+                    <i class="fa-solid fa-people-group text-2xl text-pink-400"></i>
+                </div>
+                <span class="text-xs font-bold uppercase tracking-wider">Meet Up</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Memories -->
+    <section id="memories" class="hidden-section w-full max-w-md z-10">
+        <h2 class="text-3xl cursive text-center mb-6">Our Best Moments</h2>
+        <div class="glass-card p-4">
+            <div class="grid grid-cols-2 gap-3">
+                <!-- Image 1 -->
+                <img src="https://i.ibb.co/Q3j27Nz6/image.jpg" class="memory-img" alt="Memory 1">
+                <!-- Image 2 -->
+                <img src="https://i.ibb.co/gZD5zgKw/image.jpg" class="memory-img" alt="Memory 2">
+                <!-- Image 3 -->
+                <img src="https://i.ibb.co/7sCFp7t/image.jpg" class="memory-img" alt="Memory 3">
+                <!-- Image 4 -->
+                <img src="https://i.ibb.co/tTbsg7YW/image.jpg" class="memory-img" alt="Memory 4">
+                <!-- Image 5 -->
+                <img src="https://i.ibb.co/gLTxqfNG/image.jpg" class="memory-img" alt="Memory 5">
+                <!-- Image 6 -->
+                <img src="https://i.ibb.co/Ldf33nTW/image.jpg" class="memory-img" alt="Memory 6">
+                <!-- Image 7 (Span full width for balance) -->
+                <img src="https://i.ibb.co/qLdkHfJq/image.jpg" class="memory-img col-span-2 aspect-video" alt="Memory 7">
+            </div>
+            <button onclick="showSection('menu')" class="mt-6 w-full bg-pink-100 hover:bg-pink-200 py-3 rounded-xl font-bold transition-all">Back to Menu</button>
+        </div>
+    </section>
+
+    <!-- Section: My Letter -->
+    <section id="letter" class="hidden-section w-full max-w-md z-10">
+        <h2 class="text-3xl cursive text-center mb-6">To My Valentine 💌</h2>
+        <div class="glass-card p-8 leading-relaxed text-pink-900 max-h-[70vh] overflow-y-auto">
+            <p class="mb-4 font-bold">Dearest Zunairah,</p>
+            <div class="space-y-4 italic text-sm md:text-base">
+                <p>These past 10 months with you my jaan has honestly felt like something straight out of a soft, happy dream. i didn’t even know i needed, like har din thoda sa better ho jata hai just because you are in it and it’s not even about big moments all the time, it’s the small thing random late night talks, stupid jokes that don’t even make sense but still make us laugh, and those quiet moments where everything just feels right without trying.</p>
+                
+                <p>being with uuu has this calm, warm feeling, jaise everything slows down in the best way possible, and i don’t have to pretend or overthink anything abt anything tht i do or wtvrrr it is calledd and the best part is tht u just gets me on the correct note like not thoda zyadaa neither thoda kam just perfect like the salt in the dish at its perfection and that kind of understanding is rare.</p>
+                
+                <p>there have been ups and downs, obviously, but even those moments somehow brought us closer instead of pulling us apart. it’s like we learned each other, grew with each other, and built something real without forcing it.</p>
+                
+                <p>i didn’t expect 10 months to mean this much, but here i am, genuinely grateful for every single day with you because being with you just feels right, simple as that so happyy 10 monthss my jaann my lovee and hoensttlyy and thank u for making this past 10 months the best of of my lifee.</p>
+                
+                <p>Honeslty i know long disntance hogaa soonnn ( wo to abhi bhi hai kyuki tum gahr se nahi nikalti) butt the fact is tht we gonna look at the postiviee side of it and lets just say itss gonna be great.</p>
+            </div>
+            <p class="mt-8 font-bold text-right">— Forever Yours ❤️</p>
+            <button onclick="showSection('menu')" class="mt-8 w-full bg-pink-100 hover:bg-pink-200 py-3 rounded-xl font-bold transition-all">Back to Menu</button>
+        </div>
+    </section>
+
+    <!-- Section: Why I Love You -->
+    <section id="why" class="hidden-section w-full max-w-md z-10">
+        <h2 class="text-3xl cursive text-center mb-6">Why I Love You</h2>
+        <div class="glass-card p-8 space-y-4">
+            <div class="flex items-start gap-4">
+                <div class="mt-1 text-pink-500"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="text-sm">You make my bad days softer and my good days brighter.</p>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="mt-1 text-pink-500"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="text-sm">You listen — really listen — and that means everything.</p>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="mt-1 text-pink-500"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="text-sm">You're my calm and my chaos at the same time.</p>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="mt-1 text-pink-500"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="text-sm">You support my dreams like they're your own.</p>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="mt-1 text-pink-500"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="text-sm">Being with you feels like home.</p>
+            </div>
+            <button onclick="showSection('menu')" class="mt-6 w-full bg-pink-100 hover:bg-pink-200 py-3 rounded-xl font-bold transition-all">Back to Menu</button>
+        </div>
+    </section>
+
+    <!-- Section: Meet Up -->
+    <section id="date" class="hidden-section w-full max-w-md z-10 text-center">
+        <h2 class="text-3xl cursive mb-6">Our Next Adventure</h2>
+        <div class="glass-card p-8">
+            <div class="text-5xl mb-4">✈️</div>
+            <h3 class="text-xl font-bold mb-2">Meet Up</h3>
+            <p class="text-sm opacity-70 mb-6 italic">"until the next time i love u"</p>
+            
+            <button onclick="openModal()" class="w-full bg-pink-500 hover:bg-pink-600 text-white py-4 rounded-2xl font-bold text-lg shadow-lg transition-all transform hover:scale-105">
+                Countdown Begins! ❤️
+            </button>
+            
+            <button onclick="showSection('menu')" class="mt-4 text-xs uppercase tracking-widest font-bold opacity-60">Back to Menu</button>
+        </div>
+    </section>
+
+    <!-- Custom Modal Popup -->
+    <div id="modal" class="modal-overlay p-4" onclick="closeModal()">
+        <div class="glass-card p-8 max-w-xs w-full text-center" onclick="event.stopPropagation()">
+            <div class="text-4xl mb-4">💖</div>
+            <p class="font-bold mb-4">I can't wait to see you again! ❤️</p>
+            <button onclick="closeModal()" class="w-full bg-pink-200 py-2 rounded-lg font-bold">See you soon!</button>
+        </div>
+    </div>
+
+    <script>
+        // Floating Hearts Logic
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            heart.style.opacity = Math.random();
+            heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+            
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 300);
+
+        // Section Navigation
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('hidden-section');
+            });
+            // Show requested section
+            document.getElementById(sectionId).classList.remove('hidden-section');
+            window.scrollTo(0,0);
+        }
+
+        // Modal Logic
+        function openModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
